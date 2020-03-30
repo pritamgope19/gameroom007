@@ -9,7 +9,7 @@ import { HomeComponent } from './home/home.component';
     RouterModule.forRoot([
       { path: 'start', component: StartComponent },
       { path: 'home', component: HomeComponent },
-      { path: '**', redirectTo: 'home' }
+      { path: '**', redirectTo: 'start' }
     ])
   ],
   exports: [
