@@ -10,6 +10,7 @@ export class AppComponent  {
   name = 'Angular';
   constructor(private testService: TestService){}
   fetch(){
-    this.testService.fetch().subscribe(data => console.log("Data",data));
+    this.testService.fetch()
+    .subscribe(data => console.log("Data",data));
   }
 }
