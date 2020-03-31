@@ -8,7 +8,6 @@ import { Observable, of } from 'rxjs';
 import { startWith, tap } from 'rxjs/operators';
 
 import { RequestCache } from '../request-cache.service';
-import { searchUrl } from '../package-search/package-search.service';
 
 
 /**
@@ -47,9 +46,10 @@ export class CachingInterceptor implements HttpInterceptor {
 /** Is this request cachable? */
 function isCachable(req: HttpRequest<any>) {
   // Only GET requests are cachable
+  this.searchUrl = "abcd";
   return req.method === 'GET' &&
     // Only npm package search is cachable in this app
-    -1 < req.url.indexOf(searchUrl);
+    -1 < req.url.indexOf(this.searchUrl);
 }
 
 /**
