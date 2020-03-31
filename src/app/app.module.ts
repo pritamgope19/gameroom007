@@ -11,12 +11,13 @@ import { StartComponent } from './start/start.component';
 import { HomeComponent } from './home/home.component';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
+import { DetailsComponent } from './details/details.component';
 
 @NgModule({
   imports:      [
     AppRoutingModule, 
     BrowserModule, FormsModule, HttpModule  ],
-  declarations: [ AppComponent, HelloComponent, StartComponent, HomeComponent, HeaderComponent, FooterComponent ],
+  declarations: [ AppComponent, HelloComponent, StartComponent, HomeComponent, HeaderComponent, FooterComponent, DetailsComponent ],
   bootstrap:    [ AppComponent ]
 })
 export class AppModule { }
