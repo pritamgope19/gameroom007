@@ -14,13 +14,15 @@ import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { DetailsComponent } from './details/details.component';
 import { from } from 'rxjs';
+import { TestComponent } from './test/test.component';
+import { TestService } from './test.service';
 
 @NgModule({
   imports:      [
     AppRoutingModule, 
     BrowserModule, FormsModule, HttpClientModule  ],
-  declarations: [ AppComponent, HelloComponent, StartComponent, HomeComponent, HeaderComponent, FooterComponent, DetailsComponent ],
+  declarations: [ AppComponent, HelloComponent, StartComponent, HomeComponent, HeaderComponent, FooterComponent, DetailsComponent, TestComponent ],
   bootstrap:    [ AppComponent ],
-  providers: [httpInterceptorProviders]
+  providers: [httpInterceptorProviders, TestService]
 })
 export class AppModule { }
