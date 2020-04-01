@@ -1,12 +1,18 @@
-import { Injectable } from "@angular/core";
-import { HttpClient } from "@angular/common/http";
+import { Injectable } from '@angular/core';
+import { HttpClient } from '@angular/common/http'
+import { Observable } from 'rxjs';
+import { Movie } from './Movie';
+
 
 @Injectable({
-  providedIn: "root"
+  providedIn: 'root'
 })
 export class TestService {
-  constructor(private http: HttpClient) {}
-  fetch() {
-    return this.http.get("https://jsonplaceholder.typicode.com/todos/1");
+  apiUrl: String = "http://starlord.hackerearth.com/movies";
+  constructor(private _http: HttpClient) { 
+  }
+
+  getMovies(): Observable<Movie[]>{
+    return this._http.get<Movie[]>(this.apiUrl.toString());
   }
 }

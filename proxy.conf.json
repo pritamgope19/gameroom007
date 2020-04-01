@@ -1,0 +1,8 @@
+{
+  "/starlord.hackerearth.com/*": {
+    "target": "http:/",
+    "secure": false,
+    "logLevel": "debug",
+    "changeOrigin": true
+  }
+}
